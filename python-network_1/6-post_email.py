@@ -5,7 +5,7 @@
 
 import requests
 import sys
-import email
+#import email
 
 
 if __name__ == "__main__":
@@ -17,4 +17,3 @@ if __name__ == "__main__":
     }
     response = requests.post(url, data=context)
     print("{}".format(response.text))
-
