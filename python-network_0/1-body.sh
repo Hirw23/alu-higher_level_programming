@@ -1,3 +1,3 @@
 #!/bin/bash
 # url that sends a get and display 
-curl -sfL "$1" -X GET
+curl -sfL "$1"
