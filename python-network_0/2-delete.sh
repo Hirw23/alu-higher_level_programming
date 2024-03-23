@@ -1,3 +1,3 @@
 #!/bin/bash
 # delete url
-curl -sX DELETE "$1"
+curl -s "$1" -X DELETE
