@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""  Write query that matches arges but safe SQL injection """
-import MySQLdb
+# script that takes in arguments and displays,
+# all values in the 'states' table of 'hbtn_0e_0_usa',
+# where 'name' matches the argument
+"""
+   import 'sys' & 'MySQLdb'
+"""
 import sys
-
+import MySQLdb
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    match = sys.argv[4]
-    c.execute("SELECT * FROM states WHERE name LIKE %s", (match, ))
-    rows = c.fetchall()
-    for row in rows:
-        print(row)
-    c.close()
-    db.close()
+    c.execute("SELECT * FROM `states`")
+    [print(state) for state in c.fetchall() if state[1] == sys.argv[4]]
