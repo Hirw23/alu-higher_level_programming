@@ -1,4 +1,3 @@
-#!/usr/bin/node 
-/* scripts the prints java */
-const myVar = "JavaScript is amazing"; 
-console.log(myVar);      
+#!/usr/bin/node
+const myVar = 'avaScript is amazing';
+console.log(myVar);
