@@ -12,7 +12,7 @@ if (args.length <= 3) {
        hight = current;
   } else if (current > second && current < high) {
     second = current;
-  }
-}
-console.log(second);
+   }
+ }
+ console.log(second);
 }
