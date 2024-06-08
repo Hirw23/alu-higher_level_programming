@@ -1,8 +1,9 @@
 #!/usr/bin/node
-const supSquare = require('./5-square.js');
+/* happy code */
 
+const supSquare = require('./5-square.js');
 class Square extends supSquare {
-  charprint (C) {
+  charPrint (C) {
     if (C == null) {
       C = 'X';
     }
